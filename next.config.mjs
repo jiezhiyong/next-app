@@ -5,7 +5,7 @@ import { codeInspectorPlugin } from "code-inspector-plugin";
 const nextConfig = {
   webpack: (config, { dev, isServer }) => {
     config.plugins.push(
-      codeInspectorPlugin({ bundler: "webpack" })
+      codeInspectorPlugin({ bundler: "webpack", hideDomPathAttr: true })
     );
     return config;
   },
